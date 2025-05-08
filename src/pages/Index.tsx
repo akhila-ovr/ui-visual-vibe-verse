@@ -1,13 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from "react";
+import Navbar from "../components/home/Navbar";
+import HeroSection from "../components/home/HeroSection";
+import SectionTitle from "../components/home/SectionTitle";
+import FeatureSection from "../components/home/FeatureSection";
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main>
+      <section className="bg-[rgba(247,246,244,1)] flex flex-col overflow-hidden items-center pt-10 pb-[74px] px-20 max-md:px-5">
+        <Navbar />
+        <HeroSection />
+        
+        <SectionTitle 
+          subtitle="WHAT IS TEAMWISE"
+          title="An AI facilitator to guide your meetings"
+          description="A short description about TeamWise maybe?"
+        />
+        
+        <FeatureSection />
+      </section>
+    </main>
   );
 };
 
